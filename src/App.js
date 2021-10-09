@@ -5,11 +5,12 @@ import MainLayout from "./Components/MainLayout";
 import CardProduct from "./Components/Parent/CardProduct";
 import ProductList from "./Components/Parent/ProductList";
 import FlexboxLayout from "./pages/FlexboxLayout";
+import GridLayout from "./pages/GridLayout";
 
 
 function App() {
   return (
-    <FlexboxLayout/>
+    <MainLayout/>
   );
 }
 
