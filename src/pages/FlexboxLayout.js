@@ -56,13 +56,13 @@ const FlexLayout = styled.div`
 export default function FlexboxLayout() {
     return (
         <FlexLayout>
-            <header>Header</header>
-            <main>
-                <article>Main</article>
-                <aside>Right Sidebar</aside>
-                <aside className="leftsidebar">Left Sidebar</aside>
-            </main>
-            <footer>Footer</footer>
+                <header>Header</header>
+                <main>
+                    <article>main</article>
+                    <aside className="sidebar1">Sidebar1</aside>
+                    <aside>Sidebar2</aside>
+                </main>
+                <footer>Footer</footer>
 
             { /*  
             <div style={{background : "red"}}>A</div>

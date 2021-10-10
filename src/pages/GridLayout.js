@@ -1,38 +1,47 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Grid1 = styled.div `
-    display : grid;
-    grid-template-rows : 100px 150px;
-    grid-template-columns : repeat(3,200px);
-    grid-gap : 10px;
-`;
+const Grid1 = styled.div`
+    display: grid;
+    grid-template-columns: 200px 200px 100px;
+`
+const Grid2 = styled.div`
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-auto-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 100px;
+    grid-auto-flow: column;
+`
 
-const Grid2 = styled.div `
-    display : grid;
-    grid-template-areas :
-    "header header header"
-    "aside main main"
-    "footer footer footer"
-    "me me me"
+const Grid3 = styled.div`
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "footer footer footer"
     ;
-`;
+    grid-template-rows: 100px 200px 50px;
+    
+`
 
-export default function GridLayout() {
+const Grid4 = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3,minmax(200px,1fr));
+    grid-template-rows: repeat(3,150px);
+    
+`
+
+export default function MyGrid() {
     return (
-        <Grid2>
-            <div style={{gridArea : "header",background : "red"}}>Header</div>
-            <div style={{gridArea : "aside",background : "green"}}>Sidebar</div>
-            <div style={{gridArea : "main",background : "blue",}}>Main</div>
-            <div style={{gridArea : "footer",background : "yellow"}}>Footer</div>
-            <div style={{gridRowStart:4,gridColumnStart:2,gridColumnEnd:3, gridArea : "me",background : "purple"}}>ME</div>
-
-
-        {/* <div style={{background : "red"}}>A</div>
-            <div style={{background : "green" , width : "50px" , height : "50px"}}>B</div>
-            <div style={{background : "blue" , width : "50px" , height : "50px"}}>C</div>
-            <div style={{background : "yellow"}}>D</div>
-            <div style={{background : "purple" , width : "50px" , height : "50px"}}>E</div> */}
-        </Grid2>
+        <Grid4>
+            <div style={{background: "red",width: 50, height: 50}}>A</div>
+            <div style={{background: "blue", width: 50, height: 50}}>B</div>
+            <div style={{background: "yellow", width: 50, height: 50 }}>C</div>
+            <div style={{ background: "green", width: 50, height: 50 }}>D</div>
+            <div style={{ background: "purple", width: 50, height: 50 }}>E</div>
+            <div style={{ background: "cyan", width: 50, height: 50 }}>F</div>
+            <div style={{ background: "gray", width: 50, height: 50 }}>G</div>
+        </Grid4>
     )
 }
